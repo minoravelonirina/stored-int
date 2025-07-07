@@ -12,7 +12,7 @@ import java.util.Random;
 @RestController
 public class StoredIntController {
 
-    private static final String FILE_PATH = "/tmp/stored-int.txt";
+    private static final String FILE_PATH = System.getProperty("java.io.tmpdir") + "/stored-int.txt";
 
     @GetMapping("/stored-int")
     public int getStoredInt() throws IOException {
